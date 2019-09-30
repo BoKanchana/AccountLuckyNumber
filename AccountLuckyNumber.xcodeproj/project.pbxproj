@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4B4656403FE1718B2245FAA /* Pods_AccountLuckyNumber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866606D70D0AB6D2A746A16A /* Pods_AccountLuckyNumber.framework */; };
 		F0CB058F23423A56009CF25E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB058E23423A56009CF25E /* AppDelegate.swift */; };
 		F0CB059123423A56009CF25E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB059023423A56009CF25E /* ViewController.swift */; };
 		F0CB059423423A56009CF25E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0CB059223423A56009CF25E /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		56BA6998EF4F0D149B3DF79C /* Pods-AccountLuckyNumber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccountLuckyNumber.debug.xcconfig"; path = "Target Support Files/Pods-AccountLuckyNumber/Pods-AccountLuckyNumber.debug.xcconfig"; sourceTree = "<group>"; };
+		866606D70D0AB6D2A746A16A /* Pods_AccountLuckyNumber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AccountLuckyNumber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C380BA27C4E9D5A73FA96229 /* Pods-AccountLuckyNumber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccountLuckyNumber.release.xcconfig"; path = "Target Support Files/Pods-AccountLuckyNumber/Pods-AccountLuckyNumber.release.xcconfig"; sourceTree = "<group>"; };
 		F0CB058B23423A56009CF25E /* AccountLuckyNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccountLuckyNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0CB058E23423A56009CF25E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0CB059023423A56009CF25E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4B4656403FE1718B2245FAA /* Pods_AccountLuckyNumber.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34ED9103153014AFF747C97B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				866606D70D0AB6D2A746A16A /* Pods_AccountLuckyNumber.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB65530B718552EC36837F3C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				56BA6998EF4F0D149B3DF79C /* Pods-AccountLuckyNumber.debug.xcconfig */,
+				C380BA27C4E9D5A73FA96229 /* Pods-AccountLuckyNumber.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F0CB058223423A56009CF25E = {
 			isa = PBXGroup;
 			children = (
 				F0CB058D23423A56009CF25E /* AccountLuckyNumber */,
 				F0CB058C23423A56009CF25E /* Products */,
+				BB65530B718552EC36837F3C /* Pods */,
+				34ED9103153014AFF747C97B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0CB059D23423A58009CF25E /* Build configuration list for PBXNativeTarget "AccountLuckyNumber" */;
 			buildPhases = (
+				8EF995ED9EC5654748E36844 /* [CP] Check Pods Manifest.lock */,
 				F0CB058723423A56009CF25E /* Sources */,
 				F0CB058823423A56009CF25E /* Frameworks */,
 				F0CB058923423A56009CF25E /* Resources */,
+				BCD6166B20C181A8DAE9000D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8EF995ED9EC5654748E36844 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AccountLuckyNumber-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCD6166B20C181A8DAE9000D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AccountLuckyNumber/Pods-AccountLuckyNumber-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AccountLuckyNumber/Pods-AccountLuckyNumber-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AccountLuckyNumber/Pods-AccountLuckyNumber-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F0CB058723423A56009CF25E /* Sources */ = {
@@ -280,6 +349,7 @@
 		};
 		F0CB059E23423A58009CF25E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56BA6998EF4F0D149B3DF79C /* Pods-AccountLuckyNumber.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +367,7 @@
 		};
 		F0CB059F23423A58009CF25E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C380BA27C4E9D5A73FA96229 /* Pods-AccountLuckyNumber.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
