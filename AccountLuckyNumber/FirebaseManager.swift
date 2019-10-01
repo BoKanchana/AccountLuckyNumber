@@ -66,8 +66,24 @@ class FirebaseManager {
     self.ref.child(LUCKY_NUMBER).observe(DataEventType.value, with:  { (snapshot) in
       if let response = snapshot.value as? [String: AnyObject] {
         let collection = response.filter { result in result.key == collection }
-        let detail = collection.filter { result in result.key == id }
-        print("Work: \(detail)")
+        for index in collection {
+          for i in index.value as! [String: AnyObject] {
+            if i.key == id {
+              let j = i.value
+              let accountLuckyNumber = j["accountLuckyNumber"]!
+              let description = j["description"]!
+              let price = j["price"]!
+              let status = j["status"]!
+              let type = j["description"]!
+              let luckyNumber = LuckyNumber(accountLuckyNumber: accountLuckyNumber as! String,
+                                            description: description as! String,
+                                            price: price as! Int,
+                                            status: status as! String,
+                                            type: type as! String)
+            completion(luckyNumber)
+            }
+          }
+        }
       }
     })
   }
