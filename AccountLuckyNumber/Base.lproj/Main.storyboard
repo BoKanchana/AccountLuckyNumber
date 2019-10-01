@@ -27,6 +27,9 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXk-Mt-kVY">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="210"/>
                                                 <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="name" translatesAutoresizingMaskIntoConstraints="NO" id="yUf-2L-OAS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414.00000000000011" height="164"/>
+                                                    </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNM-kQ-5U0">
                                                         <rect key="frame" x="0.0" y="164" width="414" height="46"/>
                                                         <subviews>
@@ -49,8 +52,12 @@
                                                 </subviews>
                                                 <color key="backgroundColor" red="1" green="0.98761296229999995" blue="0.88702366210000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="yUf-2L-OAS" secondAttribute="trailing" id="5Nx-N4-jk0"/>
                                                     <constraint firstItem="UNM-kQ-5U0" firstAttribute="leading" secondItem="VXk-Mt-kVY" secondAttribute="leading" id="94k-K3-smo"/>
                                                     <constraint firstItem="UNM-kQ-5U0" firstAttribute="top" secondItem="VXk-Mt-kVY" secondAttribute="top" constant="164" id="Izk-5j-oOJ"/>
+                                                    <constraint firstItem="yUf-2L-OAS" firstAttribute="leading" secondItem="VXk-Mt-kVY" secondAttribute="leading" id="KXc-OP-MSb"/>
+                                                    <constraint firstItem="UNM-kQ-5U0" firstAttribute="top" secondItem="yUf-2L-OAS" secondAttribute="bottom" id="M1j-db-oWq"/>
+                                                    <constraint firstItem="yUf-2L-OAS" firstAttribute="top" secondItem="VXk-Mt-kVY" secondAttribute="top" id="VX4-la-amB"/>
                                                     <constraint firstAttribute="trailing" secondItem="UNM-kQ-5U0" secondAttribute="trailing" id="h4V-ZC-9kk"/>
                                                     <constraint firstAttribute="height" constant="210" id="mZx-Fd-xgb"/>
                                                 </constraints>
@@ -61,32 +68,47 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lLt-KB-j8D">
                                                         <rect key="frame" x="0.0" y="0.0" width="136" height="142"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fjf-Yd-qnt">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="family2" translatesAutoresizingMaskIntoConstraints="NO" id="Fjf-Yd-qnt">
                                                                 <rect key="frame" x="0.0" y="0.0" width="136" height="142"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="Fjf-Yd-qnt" firstAttribute="top" secondItem="lLt-KB-j8D" secondAttribute="top" id="6pF-Gp-fXa"/>
+                                                            <constraint firstItem="Fjf-Yd-qnt" firstAttribute="leading" secondItem="lLt-KB-j8D" secondAttribute="leading" id="NHV-Wd-cjI"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Fjf-Yd-qnt" secondAttribute="bottom" id="nkY-4A-bsb"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Fjf-Yd-qnt" secondAttribute="trailing" id="yRi-nl-pgt"/>
+                                                        </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7yi-vY-QcJ">
                                                         <rect key="frame" x="139" y="0.0" width="136" height="142"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LFN-vp-lse">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="LFN-vp-lse">
                                                                 <rect key="frame" x="0.0" y="0.0" width="136" height="142"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="LFN-vp-lse" secondAttribute="bottom" id="N8z-vg-wjC"/>
+                                                            <constraint firstItem="LFN-vp-lse" firstAttribute="top" secondItem="7yi-vY-QcJ" secondAttribute="top" id="V6L-YG-OqQ"/>
+                                                            <constraint firstAttribute="trailing" secondItem="LFN-vp-lse" secondAttribute="trailing" id="gbx-84-owf"/>
+                                                            <constraint firstItem="LFN-vp-lse" firstAttribute="leading" secondItem="7yi-vY-QcJ" secondAttribute="leading" id="h83-Qg-qdy"/>
+                                                        </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yI2-Ku-LY0">
                                                         <rect key="frame" x="278" y="0.0" width="136" height="142"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vHV-cg-Tq3">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SCB" translatesAutoresizingMaskIntoConstraints="NO" id="vHV-cg-Tq3">
                                                                 <rect key="frame" x="0.0" y="0.0" width="136" height="142"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.19686790000000001" green="0.1158586199" blue="0.3987944162" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="vHV-cg-Tq3" secondAttribute="trailing" id="KRW-WC-3K0"/>
+                                                            <constraint firstItem="vHV-cg-Tq3" firstAttribute="top" secondItem="yI2-Ku-LY0" secondAttribute="top" id="fZj-ac-mSg"/>
+                                                            <constraint firstItem="vHV-cg-Tq3" firstAttribute="leading" secondItem="yI2-Ku-LY0" secondAttribute="leading" id="k8F-bt-al2"/>
+                                                            <constraint firstAttribute="bottom" secondItem="vHV-cg-Tq3" secondAttribute="bottom" id="zza-wx-Hco"/>
+                                                        </constraints>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
@@ -99,33 +121,48 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vWn-cx-bEj">
                                                         <rect key="frame" x="0.0" y="0.0" width="136" height="138"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qv4-zN-0ut">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Money" translatesAutoresizingMaskIntoConstraints="NO" id="qv4-zN-0ut">
                                                                 <rect key="frame" x="0.0" y="0.0" width="136" height="138"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.83006479010000001" green="0.82900105000000002" blue="0.84758194060000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="qv4-zN-0ut" secondAttribute="bottom" id="809-qc-axL"/>
+                                                            <constraint firstItem="qv4-zN-0ut" firstAttribute="leading" secondItem="vWn-cx-bEj" secondAttribute="leading" id="IIk-F5-9AP"/>
+                                                            <constraint firstItem="qv4-zN-0ut" firstAttribute="top" secondItem="vWn-cx-bEj" secondAttribute="top" id="VJq-be-3Zj"/>
+                                                            <constraint firstAttribute="trailing" secondItem="qv4-zN-0ut" secondAttribute="trailing" id="rHk-Da-KQW"/>
+                                                        </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6sB-J1-oE1">
                                                         <rect key="frame" x="139" y="0.0" width="136" height="138"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IGr-NZ-Exa">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="water_fire" translatesAutoresizingMaskIntoConstraints="NO" id="IGr-NZ-Exa">
                                                                 <rect key="frame" x="0.0" y="0.0" width="136" height="138"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="IGr-NZ-Exa" secondAttribute="bottom" id="HV1-iK-0B7"/>
+                                                            <constraint firstItem="IGr-NZ-Exa" firstAttribute="leading" secondItem="6sB-J1-oE1" secondAttribute="leading" id="WT4-cd-rta"/>
+                                                            <constraint firstItem="IGr-NZ-Exa" firstAttribute="top" secondItem="6sB-J1-oE1" secondAttribute="top" id="dS7-uv-AmP"/>
+                                                            <constraint firstAttribute="trailing" secondItem="IGr-NZ-Exa" secondAttribute="trailing" id="lSW-yv-hNg"/>
+                                                        </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AUr-1x-Qoz">
                                                         <rect key="frame" x="278" y="0.0" width="136" height="138"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G6Q-Hh-kSw">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EasyPass" translatesAutoresizingMaskIntoConstraints="NO" id="G6Q-Hh-kSw">
                                                                 <rect key="frame" x="0.0" y="0.0" width="136" height="138"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="G6Q-Hh-kSw" secondAttribute="bottom" id="G8n-yi-IxU"/>
+                                                            <constraint firstItem="G6Q-Hh-kSw" firstAttribute="leading" secondItem="AUr-1x-Qoz" secondAttribute="leading" id="Ktc-aR-HYA"/>
+                                                            <constraint firstItem="G6Q-Hh-kSw" firstAttribute="top" secondItem="AUr-1x-Qoz" secondAttribute="top" id="UJa-dq-jF8"/>
+                                                            <constraint firstAttribute="trailing" secondItem="G6Q-Hh-kSw" secondAttribute="trailing" id="dQ4-rh-Agd"/>
+                                                        </constraints>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
@@ -134,9 +171,18 @@
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lsj-RF-tIR">
                                                 <rect key="frame" x="0.0" y="505" width="414" height="169"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="child" translatesAutoresizingMaskIntoConstraints="NO" id="KNY-S9-Cvf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="169"/>
+                                                    </imageView>
+                                                </subviews>
                                                 <color key="backgroundColor" red="1" green="0.83106775580000003" blue="0.1000673864" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="KNY-S9-Cvf" secondAttribute="bottom" id="1al-sh-S4E"/>
+                                                    <constraint firstItem="KNY-S9-Cvf" firstAttribute="top" secondItem="lsj-RF-tIR" secondAttribute="top" id="1ip-Kn-iKm"/>
                                                     <constraint firstAttribute="height" constant="169" id="Bsp-GM-rbK"/>
+                                                    <constraint firstItem="KNY-S9-Cvf" firstAttribute="leading" secondItem="lsj-RF-tIR" secondAttribute="leading" id="y9e-zX-2XW"/>
+                                                    <constraint firstAttribute="trailing" secondItem="KNY-S9-Cvf" secondAttribute="trailing" id="z3c-0r-8MH"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpj-7c-M6O" userLabel="LuckyNumberView">
@@ -204,6 +250,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="EasyPass" width="244" height="243"/>
         <image name="LuckyNumber" width="1125" height="375"/>
+        <image name="Money" width="243" height="243"/>
+        <image name="SCB" width="243" height="242"/>
+        <image name="child" width="749" height="242"/>
+        <image name="family2" width="245" height="244"/>
+        <image name="name" width="748" height="236"/>
+        <image name="phone" width="244" height="244"/>
+        <image name="water_fire" width="243" height="244"/>
     </resources>
 </document>
