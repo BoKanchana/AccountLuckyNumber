@@ -17,6 +17,7 @@
 		F0CB059423423A56009CF25E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0CB059223423A56009CF25E /* Main.storyboard */; };
 		F0CB059623423A58009CF25E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0CB059523423A58009CF25E /* Assets.xcassets */; };
 		F0CB059923423A58009CF25E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0CB059723423A58009CF25E /* LaunchScreen.storyboard */; };
+		F0CB05A123426BD5009CF25E /* LuckyNumberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB05A023426BD5009CF25E /* LuckyNumberDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		F0CB059523423A58009CF25E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0CB059823423A58009CF25E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0CB059A23423A58009CF25E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0CB05A023426BD5009CF25E /* LuckyNumberDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyNumberDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -364,7 +366,7 @@
 		};
 		F0CB059E23423A58009CF25E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6B5A3D135FB6783327CDCA4 /* Pods-AccountLuckyNumber.debug.xcconfig */;
+			baseConfigurationReference = 56BA6998EF4F0D149B3DF79C /* Pods-AccountLuckyNumber.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -382,7 +384,7 @@
 		};
 		F0CB059F23423A58009CF25E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A96F9E9054CC66E33A807ECB /* Pods-AccountLuckyNumber.release.xcconfig */;
+			baseConfigurationReference = C380BA27C4E9D5A73FA96229 /* Pods-AccountLuckyNumber.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
