@@ -42,23 +42,6 @@ class FirebaseManager {
     ref = Database.database().reference()
   }
   
-  func getAccountNumberDict(completion: @escaping ([AccountNumber]) -> Void) {
-    self.ref.child(ACCOUNT_KEY).observe(DataEventType.value, with: { (snapshot) in
-      // TODO: check response
-      if let response = snapshot.value as? [String : AnyObject] {
-        for data in response.values {
-          let account = AccountNumber(accountNumber: data["accountNumber"] as! String,
-                                      accountType: data["accountType"] as! String,
-                                      firstname: data["firstname"] as! String,
-                                      lastname: data["lastname"] as! String
-          )
-          self.list.append(account)
-        }
-        completion(self.list)
-      }
-    })
-  }
-  
   func getLuckyNumberCollection(completion: @escaping ([Any]) -> Void) {
     self.ref.child(LUCKY_NUMBER).observe(DataEventType.value, with: { (snapshot) in
       if let response = snapshot.value as? [String: AnyObject] {

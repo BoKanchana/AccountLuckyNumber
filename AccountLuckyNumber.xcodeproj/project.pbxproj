@@ -8,26 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		04906401F809AD9CF47DDA03 /* Pods_AccountLuckyNumber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE4AD2FEEDCFDA82B0F9DCF /* Pods_AccountLuckyNumber.framework */; };
-		D062004623426FCF004312D3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D062004523426FCF004312D3 /* GoogleService-Info.plist */; };
 		D06200482342704D004312D3 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06200472342704D004312D3 /* FirebaseManager.swift */; };
-		D062004A23427076004312D3 /* AccountNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = D062004923427076004312D3 /* AccountNumber.swift */; };
 		D062004C23427093004312D3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D062004B23427093004312D3 /* Constants.swift */; };
+		F040CE6523437B4400064A40 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F040CE6423437B4400064A40 /* GoogleService-Info.plist */; };
 		F0CB058F23423A56009CF25E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB058E23423A56009CF25E /* AppDelegate.swift */; };
 		F0CB059123423A56009CF25E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB059023423A56009CF25E /* ViewController.swift */; };
 		F0CB059423423A56009CF25E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0CB059223423A56009CF25E /* Main.storyboard */; };
 		F0CB059623423A58009CF25E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0CB059523423A58009CF25E /* Assets.xcassets */; };
 		F0CB059923423A58009CF25E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0CB059723423A58009CF25E /* LaunchScreen.storyboard */; };
-		F0CB05A123426BD5009CF25E /* LuckyNumberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB05A023426BD5009CF25E /* LuckyNumberDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5DE4AD2FEEDCFDA82B0F9DCF /* Pods_AccountLuckyNumber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AccountLuckyNumber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96F9E9054CC66E33A807ECB /* Pods-AccountLuckyNumber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccountLuckyNumber.release.xcconfig"; path = "Target Support Files/Pods-AccountLuckyNumber/Pods-AccountLuckyNumber.release.xcconfig"; sourceTree = "<group>"; };
-		D062004523426FCF004312D3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D06200472342704D004312D3 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
-		D062004923427076004312D3 /* AccountNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNumber.swift; sourceTree = "<group>"; };
 		D062004B23427093004312D3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E6B5A3D135FB6783327CDCA4 /* Pods-AccountLuckyNumber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccountLuckyNumber.debug.xcconfig"; path = "Target Support Files/Pods-AccountLuckyNumber/Pods-AccountLuckyNumber.debug.xcconfig"; sourceTree = "<group>"; };
+		F040CE6423437B4400064A40 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F0CB058B23423A56009CF25E /* AccountLuckyNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccountLuckyNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0CB058E23423A56009CF25E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0CB059023423A56009CF25E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,7 +32,6 @@
 		F0CB059523423A58009CF25E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0CB059823423A58009CF25E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0CB059A23423A58009CF25E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F0CB05A023426BD5009CF25E /* LuckyNumberDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyNumberDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +84,7 @@
 		F0CB058D23423A56009CF25E /* AccountLuckyNumber */ = {
 			isa = PBXGroup;
 			children = (
-				D062004523426FCF004312D3 /* GoogleService-Info.plist */,
+				F040CE6423437B4400064A40 /* GoogleService-Info.plist */,
 				F0CB058E23423A56009CF25E /* AppDelegate.swift */,
 				F0CB059023423A56009CF25E /* ViewController.swift */,
 				F0CB059223423A56009CF25E /* Main.storyboard */,
@@ -96,7 +92,6 @@
 				F0CB059723423A58009CF25E /* LaunchScreen.storyboard */,
 				F0CB059A23423A58009CF25E /* Info.plist */,
 				D06200472342704D004312D3 /* FirebaseManager.swift */,
-				D062004923427076004312D3 /* AccountNumber.swift */,
 				D062004B23427093004312D3 /* Constants.swift */,
 			);
 			path = AccountLuckyNumber;
@@ -163,7 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0CB059923423A58009CF25E /* LaunchScreen.storyboard in Resources */,
-				D062004623426FCF004312D3 /* GoogleService-Info.plist in Resources */,
+				F040CE6523437B4400064A40 /* GoogleService-Info.plist in Resources */,
 				F0CB059623423A58009CF25E /* Assets.xcassets in Resources */,
 				F0CB059423423A56009CF25E /* Main.storyboard in Resources */,
 			);
@@ -219,7 +214,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D062004C23427093004312D3 /* Constants.swift in Sources */,
-				D062004A23427076004312D3 /* AccountNumber.swift in Sources */,
 				D06200482342704D004312D3 /* FirebaseManager.swift in Sources */,
 				F0CB059123423A56009CF25E /* ViewController.swift in Sources */,
 				F0CB058F23423A56009CF25E /* AppDelegate.swift in Sources */,
@@ -366,7 +360,7 @@
 		};
 		F0CB059E23423A58009CF25E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56BA6998EF4F0D149B3DF79C /* Pods-AccountLuckyNumber.debug.xcconfig */;
+			baseConfigurationReference = E6B5A3D135FB6783327CDCA4 /* Pods-AccountLuckyNumber.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -384,7 +378,7 @@
 		};
 		F0CB059F23423A58009CF25E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C380BA27C4E9D5A73FA96229 /* Pods-AccountLuckyNumber.release.xcconfig */;
+			baseConfigurationReference = A96F9E9054CC66E33A807ECB /* Pods-AccountLuckyNumber.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
