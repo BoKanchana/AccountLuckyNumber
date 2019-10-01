@@ -9,12 +9,40 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view.
-  }
-
-
+    private var firebase: FirebaseManager!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        firebase = FirebaseManager()
+        createAccountNumber(accountNumber: AccountNumber(accountNumber: "000-000-000-0", accountType: "saving", firstname: "Noey", lastname: "Jaa"))
+        getAccountNumberDict()
+    }
+    
+    func createAccountNumber(accountNumber: AccountNumber) {
+        firebase.createAccountNumber(account: accountNumber)
+    }
+    
+    func getAccountNumberDict() {
+        firebase.getAccountNumberDict() { [weak self] (data) in
+            for item in data {
+                print("getAccountList() = \(item)")
+            }
+        }
+    }
+    
+    func getAccountNumber(accountName: String) {
+        firebase.getAccountNumber(accNumber: accountName) { [weak self] (data) in
+            print("getAccount() = \(data)")
+        }
+    }
+    
+    func updateAccountNumber(fromAccountNumber: String, toAccount: AccountNumber) {
+        firebase.updateAccountNumber(fromAccountNumber: fromAccountNumber, toAccount: toAccount)
+    }
+    
+    func deleteAccountNumber(accountNumber: String) {
+        firebase.deleteAccountNumber(accountNumber: accountNumber)
+    }
+    
 }
 
