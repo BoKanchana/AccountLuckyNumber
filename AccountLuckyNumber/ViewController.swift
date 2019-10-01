@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         firebase = FirebaseManager()
-        createAccountNumber(accountNumber: AccountNumber(accountNumber: "000-000-000-0", accountType: "saving", firstname: "Noey", lastname: "Jaa"))
+        createAccountNumber(accountNumber: AccountNumber(accountNumber: "111-111-111-1", accountType: "saving", firstname: "Noey", lastname: "Eeng"))
         getAccountNumberDict()
     }
     
