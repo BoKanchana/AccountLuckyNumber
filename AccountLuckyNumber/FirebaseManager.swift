@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import Alamofire
 
 struct AccountNumber {
     var accountNumber: String
@@ -214,8 +215,70 @@ class FirebaseManager {
             }
         }
     }
+  
+  func getAccessToken() {
+    let body: [String: Any] = [
+      "applicationKey" : "l7a02b32cbfd774988882e58a6c2d5c77e",
+      "applicationSecret" : "a1d71fad366340d8bd4a7516f5c5d250"
+    ]
+    let urlString = "https://api.partners.scb/partners/sandbox/v1/oauth/token"
+    let headers: HTTPHeaders = ["Content-Type": "application/json",
+                                "resourceOwnerId": "l7a02b32cbfd774988882e58a6c2d5c77e",
+                                "requestUId": "1",
+                                "accept-language": "EN"]
     
+    Alamofire.request(urlString,
+                      method: .post,
+                      parameters: body,
+                      encoding: JSONEncoding.default,
+                      headers: headers).responseJSON { (response) -> Void in
+                        switch response.result {
+                          
+                        case .success(let json):
+                          print(json)
+                        case .failure(let error):
+                          print(error)
+                        }
+    }
+  }
+  
+  func generateDeeplink(completion: @escaping(_ result: Any) -> Void) {
+    let urlString = "https://api.partners.scb/partners/sandbox/v3/deeplink/transactions"
+    let ref: Parameters = ["paymentAmount": 100.00,
+                           "accountTo": "448204658651865",
+                           "ref1": "QMM",
+                           "ref2": "QMM",
+                           "ref3": "QMM"]
     
+    let body: Parameters = ["transactionType": "PURCHASE",
+                            "transactionSubType": ["BP"],
+                            "sessionValidityPeriod": 1800,
+                            "sessionValidUntil": "",
+                            "billPayment": ref]
+    let headers: HTTPHeaders = ["Content-Type": "application/json",
+                                "authorization": "Bearer c908bf29-7c0a-492d-94bc-898d791a1ffe",
+                                "resourceOwnerId": "l7a02b32cbfd774988882e58a6c2d5c77e",
+                                "requestUId": "1",
+                                "channel": "scbeasy"]
+    Alamofire.request(urlString,
+                      method: .post,
+                      parameters: body,
+                      encoding: JSONEncoding.default,
+                      headers: headers).responseJSON { (response) -> Void in
+                        switch response.result {
+                        case .success(let json):
+                          let data = json as! [String: AnyObject]
+                          for index in data {
+                            if index.key == "data" {
+                              print("data: \(index)")
+                              completion(index.value)
+                            }
+                          }
+                        case .failure(let error):
+                          print(error)
+                        }
+    }
+  }
     
     
 }

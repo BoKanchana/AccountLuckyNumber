@@ -340,7 +340,59 @@
                     <view key="view" contentMode="scaleToFill" id="Z3a-bx-C9d">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ahq-JG-Nfx">
+                                <rect key="frame" x="0.0" y="647" width="414" height="60"/>
+                                <color key="backgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="m3O-ZG-ovK"/>
+                                </constraints>
+                                <state key="normal" title="Go to EasyApp">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToEasyApp:" destination="5wY-wC-DqI" eventType="touchUpInside" id="pPZ-hb-xX6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Pc-rn-a9O">
+                                <rect key="frame" x="0.0" y="557" width="414" height="60"/>
+                                <color key="backgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="d2N-tM-8el"/>
+                                </constraints>
+                                <state key="normal" title="Generate Deeplink">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="generateDeeplink:" destination="5wY-wC-DqI" eventType="touchUpInside" id="GTA-Bx-JiA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGF-SL-5Rz">
+                                <rect key="frame" x="0.0" y="467" width="414" height="60"/>
+                                <color key="backgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="pSD-Gb-ajj"/>
+                                </constraints>
+                                <state key="normal" title="Generate Access Token">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="getToken:" destination="5wY-wC-DqI" eventType="touchUpInside" id="EMS-iz-Sd0"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2Pc-rn-a9O" firstAttribute="trailing" secondItem="ffL-17-Fov" secondAttribute="trailing" id="IBr-7S-aUT"/>
+                            <constraint firstItem="2Pc-rn-a9O" firstAttribute="leading" secondItem="ffL-17-Fov" secondAttribute="leading" id="LhR-NX-jJw"/>
+                            <constraint firstItem="Ahq-JG-Nfx" firstAttribute="leading" secondItem="ffL-17-Fov" secondAttribute="leading" id="OLi-ru-Cuj"/>
+                            <constraint firstItem="vGF-SL-5Rz" firstAttribute="leading" secondItem="ffL-17-Fov" secondAttribute="leading" id="Pka-YF-nVx"/>
+                            <constraint firstItem="Ahq-JG-Nfx" firstAttribute="top" secondItem="2Pc-rn-a9O" secondAttribute="bottom" constant="30" id="Wn7-ld-F1w"/>
+                            <constraint firstItem="Ahq-JG-Nfx" firstAttribute="trailing" secondItem="ffL-17-Fov" secondAttribute="trailing" id="Y7V-Oi-Dff"/>
+                            <constraint firstItem="2Pc-rn-a9O" firstAttribute="top" secondItem="vGF-SL-5Rz" secondAttribute="bottom" constant="30" id="bhV-DB-Aza"/>
+                            <constraint firstItem="ffL-17-Fov" firstAttribute="bottom" secondItem="Ahq-JG-Nfx" secondAttribute="bottom" constant="29" id="jHq-GQ-5BQ"/>
+                            <constraint firstItem="vGF-SL-5Rz" firstAttribute="trailing" secondItem="ffL-17-Fov" secondAttribute="trailing" id="pzQ-MS-3Rm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ffL-17-Fov"/>
                     </view>
                 </viewController>

@@ -9,8 +9,28 @@
 import UIKit
 
 class LuckyNumberDetailViewController: UIViewController {
-
-    override func viewDidLoad() {
+  var deeplink: String = ""
+  @IBAction func getToken(_ sender: Any) {
+    FirebaseManager().getAccessToken()
+  }
+  
+  @IBAction func generateDeeplink(_ sender: Any) {
+    FirebaseManager().generateDeeplink() { result in
+      let results: [String: AnyObject] = result as! [String : AnyObject]
+      for index in results {
+        if index.key == "deeplinkUrl" {
+          self.deeplink = index.value as! String
+          print("deeplink: \(index)")
+        }
+      }
+    }
+  }
+  
+  @IBAction func goToEasyApp(_ sender: Any) {
+    UIApplication.shared.openURL(NSURL(string: "\(deeplink)?callback_url=accountluckynumber://")! as URL)
+  }
+  
+  override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
