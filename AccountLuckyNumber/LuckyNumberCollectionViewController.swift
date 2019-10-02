@@ -49,3 +49,9 @@ extension LuckyNumberCollectionViewController : UITableViewDataSource {
   
   
 }
+
+extension LuckyNumberCollectionViewController : UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+     performSegue(withIdentifier: "LuckyNumberCollectionViewControllerGoToLuckyNumberList", sender: nil)
+  }
+}

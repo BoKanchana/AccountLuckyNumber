@@ -12,6 +12,10 @@
 		12EBB87D23442C2800A7384A /* LuckyNumberCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EBB87B23442C2800A7384A /* LuckyNumberCollectionTableViewCell.swift */; };
 		12EBB87E23442C2800A7384A /* LuckyNumberCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12EBB87C23442C2800A7384A /* LuckyNumberCollectionTableViewCell.xib */; };
 		12EBB882234430EF00A7384A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12EBB881234430EE00A7384A /* GoogleService-Info.plist */; };
+		12EBB8852344AD5300A7384A /* LuckyNumberListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EBB8832344AD5300A7384A /* LuckyNumberListCollectionViewCell.swift */; };
+		12EBB8862344AD5300A7384A /* LuckyNumberListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12EBB8842344AD5300A7384A /* LuckyNumberListCollectionViewCell.xib */; };
+		12EBB8882344AEA900A7384A /* LuckNumberListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EBB8872344AEA900A7384A /* LuckNumberListViewController.swift */; };
+		12EBB88A2344BF5500A7384A /* LuckyNumberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EBB8892344BF5500A7384A /* LuckyNumberDetailViewController.swift */; };
 		D06200482342704D004312D3 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06200472342704D004312D3 /* FirebaseManager.swift */; };
 		D062004C23427093004312D3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D062004B23427093004312D3 /* Constants.swift */; };
 		F0CB058F23423A56009CF25E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB058E23423A56009CF25E /* AppDelegate.swift */; };
@@ -26,6 +30,10 @@
 		12EBB87B23442C2800A7384A /* LuckyNumberCollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyNumberCollectionTableViewCell.swift; sourceTree = "<group>"; };
 		12EBB87C23442C2800A7384A /* LuckyNumberCollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LuckyNumberCollectionTableViewCell.xib; sourceTree = "<group>"; };
 		12EBB881234430EE00A7384A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		12EBB8832344AD5300A7384A /* LuckyNumberListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyNumberListCollectionViewCell.swift; sourceTree = "<group>"; };
+		12EBB8842344AD5300A7384A /* LuckyNumberListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LuckyNumberListCollectionViewCell.xib; sourceTree = "<group>"; };
+		12EBB8872344AEA900A7384A /* LuckNumberListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckNumberListViewController.swift; sourceTree = "<group>"; };
+		12EBB8892344BF5500A7384A /* LuckyNumberDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyNumberDetailViewController.swift; sourceTree = "<group>"; };
 		5DE4AD2FEEDCFDA82B0F9DCF /* Pods_AccountLuckyNumber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AccountLuckyNumber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96F9E9054CC66E33A807ECB /* Pods-AccountLuckyNumber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccountLuckyNumber.release.xcconfig"; path = "Target Support Files/Pods-AccountLuckyNumber/Pods-AccountLuckyNumber.release.xcconfig"; sourceTree = "<group>"; };
 		D06200472342704D004312D3 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
@@ -66,6 +74,8 @@
 			children = (
 				12EBB87B23442C2800A7384A /* LuckyNumberCollectionTableViewCell.swift */,
 				12EBB87C23442C2800A7384A /* LuckyNumberCollectionTableViewCell.xib */,
+				12EBB8832344AD5300A7384A /* LuckyNumberListCollectionViewCell.swift */,
+				12EBB8842344AD5300A7384A /* LuckyNumberListCollectionViewCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -110,6 +120,8 @@
 				D06200472342704D004312D3 /* FirebaseManager.swift */,
 				D062004B23427093004312D3 /* Constants.swift */,
 				12EBB87823442B9C00A7384A /* LuckyNumberCollectionViewController.swift */,
+				12EBB8872344AEA900A7384A /* LuckNumberListViewController.swift */,
+				12EBB8892344BF5500A7384A /* LuckyNumberDetailViewController.swift */,
 			);
 			path = AccountLuckyNumber;
 			sourceTree = "<group>";
@@ -176,6 +188,7 @@
 			files = (
 				F0CB059923423A58009CF25E /* LaunchScreen.storyboard in Resources */,
 				12EBB87E23442C2800A7384A /* LuckyNumberCollectionTableViewCell.xib in Resources */,
+				12EBB8862344AD5300A7384A /* LuckyNumberListCollectionViewCell.xib in Resources */,
 				12EBB882234430EF00A7384A /* GoogleService-Info.plist in Resources */,
 				F0CB059623423A58009CF25E /* Assets.xcassets in Resources */,
 				F0CB059423423A56009CF25E /* Main.storyboard in Resources */,
@@ -231,10 +244,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12EBB88A2344BF5500A7384A /* LuckyNumberDetailViewController.swift in Sources */,
+				12EBB8882344AEA900A7384A /* LuckNumberListViewController.swift in Sources */,
 				D062004C23427093004312D3 /* Constants.swift in Sources */,
 				D06200482342704D004312D3 /* FirebaseManager.swift in Sources */,
 				F0CB059123423A56009CF25E /* ViewController.swift in Sources */,
 				F0CB058F23423A56009CF25E /* AppDelegate.swift in Sources */,
+				12EBB8852344AD5300A7384A /* LuckyNumberListCollectionViewCell.swift in Sources */,
 				12EBB87923442B9C00A7384A /* LuckyNumberCollectionViewController.swift in Sources */,
 				12EBB87D23442C2800A7384A /* LuckyNumberCollectionTableViewCell.swift in Sources */,
 			);
