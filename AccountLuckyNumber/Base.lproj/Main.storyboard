@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6wV-i2-TCx">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Lucky Number Detail View Controller-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AccountLuckyNumber" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l4c-qx-JJ0">
-                                <rect key="frame" x="0.0" y="20" width="414" height="800"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="756"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mvh-U4-3yu">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="740"/>
@@ -169,6 +169,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34Z-OD-v8N">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="169"/>
                                                         <state key="normal" title="Button" image="LuckyNumber"/>
+                                                        <connections>
+                                                            <segue destination="BAd-5M-4cY" kind="show" id="KpJ-fb-tAt"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -220,15 +223,153 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hqA-G8-QH8"/>
                     <size key="freeformSize" width="414" height="820"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+            <point key="canvasLocation" x="1044.9275362318842" y="129.61956521739131"/>
+        </scene>
+        <!--Lucky Number Collection View Controller-->
+        <scene sceneID="HgA-iZ-riv">
+            <objects>
+                <viewController id="BAd-5M-4cY" customClass="LuckyNumberCollectionViewController" customModule="AccountLuckyNumber" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eip-wt-LZC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SiR-rG-urm">
+                                <rect key="frame" x="0.0" y="117" width="414" height="619"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BAd-5M-4cY" id="hAb-tc-Yq5"/>
+                                    <outlet property="delegate" destination="BAd-5M-4cY" id="bmW-gP-dom"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nt3-o3-gwh">
+                                <rect key="frame" x="20" y="86" width="384" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Nt3-o3-gwh" firstAttribute="leading" secondItem="MEi-Pm-1YD" secondAttribute="leading" constant="20" id="0ZM-9h-L9Q"/>
+                            <constraint firstItem="MEi-Pm-1YD" firstAttribute="trailing" secondItem="SiR-rG-urm" secondAttribute="trailing" id="0ci-Zy-xtW"/>
+                            <constraint firstItem="MEi-Pm-1YD" firstAttribute="bottom" secondItem="SiR-rG-urm" secondAttribute="bottom" id="HeF-cV-u8K"/>
+                            <constraint firstItem="MEi-Pm-1YD" firstAttribute="trailing" secondItem="Nt3-o3-gwh" secondAttribute="trailing" constant="10" id="P8U-ig-vak"/>
+                            <constraint firstItem="SiR-rG-urm" firstAttribute="leading" secondItem="MEi-Pm-1YD" secondAttribute="leading" id="WIA-PT-xdc"/>
+                            <constraint firstItem="Nt3-o3-gwh" firstAttribute="top" secondItem="MEi-Pm-1YD" secondAttribute="top" constant="22" id="cXL-0E-P57"/>
+                            <constraint firstItem="SiR-rG-urm" firstAttribute="top" secondItem="Nt3-o3-gwh" secondAttribute="bottom" constant="10" id="wKR-lw-cjq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MEi-Pm-1YD"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="SiR-rG-urm" id="UYt-Wb-f1m"/>
+                        <segue destination="peT-1i-6WG" kind="show" identifier="LuckyNumberCollectionViewControllerGoToLuckyNumberList" id="7WV-1f-XYa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cke-wj-UsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1834.7826086956522" y="94.565217391304358"/>
+        </scene>
+        <!--Luck Number List View Controller-->
+        <scene sceneID="HW7-yK-0Kk">
+            <objects>
+                <viewController id="peT-1i-6WG" customClass="LuckNumberListViewController" customModule="AccountLuckyNumber" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XAq-AD-Z8x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LuckNumberOfLove" translatesAutoresizingMaskIntoConstraints="NO" id="iI7-X0-ctk">
+                                <rect key="frame" x="0.0" y="64" width="414" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="JNg-4X-nBb"/>
+                                </constraints>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KOi-uP-L9D">
+                                <rect key="frame" x="0.0" y="330" width="414" height="406"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9tk-3M-Jtc">
+                                    <size key="itemSize" width="160" height="100"/>
+                                    <size key="headerReferenceSize" width="20" height="20"/>
+                                    <size key="footerReferenceSize" width="20" height="20"/>
+                                    <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="NMo-D9-Ytt">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LsO-qn-rpJ">
+                                    <rect key="frame" x="0.0" y="60" width="414" height="20"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="peT-1i-6WG" id="nYh-GU-m0d"/>
+                                    <outlet property="delegate" destination="peT-1i-6WG" id="dg8-jm-I06"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iI7-X0-ctk" firstAttribute="top" secondItem="PEw-dE-xpf" secondAttribute="top" id="8mB-zL-ovu"/>
+                            <constraint firstItem="PEw-dE-xpf" firstAttribute="trailing" secondItem="KOi-uP-L9D" secondAttribute="trailing" id="EDX-i0-MtX"/>
+                            <constraint firstItem="KOi-uP-L9D" firstAttribute="leading" secondItem="PEw-dE-xpf" secondAttribute="leading" id="IGN-DT-bRt"/>
+                            <constraint firstItem="iI7-X0-ctk" firstAttribute="leading" secondItem="PEw-dE-xpf" secondAttribute="leading" id="NiR-vZ-oZW"/>
+                            <constraint firstItem="PEw-dE-xpf" firstAttribute="bottom" secondItem="KOi-uP-L9D" secondAttribute="bottom" id="fPS-OF-HuX"/>
+                            <constraint firstItem="KOi-uP-L9D" firstAttribute="top" secondItem="iI7-X0-ctk" secondAttribute="bottom" constant="16" id="lZk-pt-Tkr"/>
+                            <constraint firstItem="PEw-dE-xpf" firstAttribute="trailing" secondItem="iI7-X0-ctk" secondAttribute="trailing" id="mej-Cw-an1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PEw-dE-xpf"/>
+                    </view>
+                    <connections>
+                        <outlet property="colletionview" destination="KOi-uP-L9D" id="jyF-E9-8Z5"/>
+                        <segue destination="5wY-wC-DqI" kind="show" identifier="LuckyNumberListGoToLuckNumberDetail" id="YYA-ux-6cJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vzv-sE-MWj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2623.1884057971015" y="94.565217391304358"/>
+        </scene>
+        <!--Lucky Number Detail View Controller-->
+        <scene sceneID="Hbv-d0-6pl">
+            <objects>
+                <viewController id="5wY-wC-DqI" customClass="LuckyNumberDetailViewController" customModule="AccountLuckyNumber" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z3a-bx-C9d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ffL-17-Fov"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wqJ-xa-wu4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3466.666666666667" y="82.33695652173914"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dw1-uH-cV1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6wV-i2-TCx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d7f-JP-qOH">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="40H-7n-Myo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q3P-JA-goV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.61956521739131"/>
         </scene>
     </scenes>
     <resources>
         <image name="EasyPass" width="244" height="243"/>
+        <image name="LuckNumberOfLove" width="564" height="376"/>
         <image name="LuckyNumber" width="1125" height="375"/>
         <image name="Money" width="243" height="243"/>
         <image name="SCB" width="243" height="242"/>
