@@ -8,5 +8,6 @@ target 'AccountLuckyNumber' do
   # Pods for AccountLuckyNumber
   pod 'Firebase/Analytics'
   pod 'Firebase/Database'
+  pod 'Alamofire'
 
 end

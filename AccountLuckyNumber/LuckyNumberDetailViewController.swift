@@ -9,6 +9,7 @@
 import UIKit
 
 class LuckyNumberDetailViewController: UIViewController {
+  
   @IBOutlet weak var luckyNumberImage: UIImageView!
   @IBOutlet weak var luckyNumberLabel: UILabel!
   @IBOutlet weak var descriptionLabel: UILabel!
