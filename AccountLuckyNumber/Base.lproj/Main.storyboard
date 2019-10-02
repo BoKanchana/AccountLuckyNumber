@@ -340,9 +340,66 @@
                     <view key="view" contentMode="scaleToFill" id="Z3a-bx-C9d">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rch-c6-9kE">
+                                <rect key="frame" x="0.0" y="63.999999999999972" width="414" height="403.33333333333326"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="2oW-Yh-u22">
+                                <rect key="frame" x="20" y="487.33333333333331" width="374" height="149.33333333333331"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="เลขบัญชีมงคล" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfW-WO-MmU">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXX-XXX1-234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGx-Z4-MJU">
+                                        <rect key="frame" x="0.0" y="26.333333333333311" width="374" height="35.666666666666657"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="26"/>
+                                        <color key="textColor" red="0.99763482809066772" green="0.83864783728110159" blue="0.1862692768727652" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaN-5o-s7r">
+                                        <rect key="frame" x="0.0" y="68.000000000000057" width="374" height="81.333333333333314"/>
+                                        <string key="text">วันที่จะเปลี่ยนมาใช้เบอร์มงคล ให้ไหว้พระ หรือตักบาตร หรือทำบุญอะไรก็ได้ แล้วตั้งจิตขอพรให้เบอร์ใหม่ส่งผลให้ชีวิตดีขึ้น พบเจอแต่สิ่งที่ดีและเป็นสิริมงคลแก่ชีวิต</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqS-Jk-KQm">
+                                <rect key="frame" x="0.0" y="684" width="414" height="52"/>
+                                <color key="backgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Nac-5A-vSe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="ทำรายการซื้อ">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Rch-c6-9kE" firstAttribute="leading" secondItem="ffL-17-Fov" secondAttribute="leading" id="62M-eU-ARe"/>
+                            <constraint firstItem="Rch-c6-9kE" firstAttribute="height" secondItem="ffL-17-Fov" secondAttribute="height" multiplier="0.6" id="GdB-Rt-wBr"/>
+                            <constraint firstItem="ffL-17-Fov" firstAttribute="trailing" secondItem="2oW-Yh-u22" secondAttribute="trailing" constant="20" id="JUc-SJ-1bl"/>
+                            <constraint firstItem="2oW-Yh-u22" firstAttribute="top" secondItem="Rch-c6-9kE" secondAttribute="bottom" constant="20" id="Kgb-44-irO"/>
+                            <constraint firstItem="QqS-Jk-KQm" firstAttribute="leading" secondItem="ffL-17-Fov" secondAttribute="leading" id="NGk-dP-pcP"/>
+                            <constraint firstItem="Rch-c6-9kE" firstAttribute="top" secondItem="ffL-17-Fov" secondAttribute="top" id="VRl-na-eqc"/>
+                            <constraint firstAttribute="bottom" secondItem="QqS-Jk-KQm" secondAttribute="bottom" id="aga-zJ-Doe"/>
+                            <constraint firstItem="ffL-17-Fov" firstAttribute="trailing" secondItem="QqS-Jk-KQm" secondAttribute="trailing" id="bqU-CT-kpO"/>
+                            <constraint firstItem="Rch-c6-9kE" firstAttribute="trailing" secondItem="ffL-17-Fov" secondAttribute="trailing" id="g8X-Zb-RFU"/>
+                            <constraint firstItem="2oW-Yh-u22" firstAttribute="leading" secondItem="ffL-17-Fov" secondAttribute="leading" constant="20" id="iDM-XR-Qv1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ffL-17-Fov"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="uaN-5o-s7r" id="O7J-gc-ytK"/>
+                        <outlet property="luckyNumberImage" destination="Rch-c6-9kE" id="RDc-Uy-zBh"/>
+                        <outlet property="luckyNumberLabel" destination="CGx-Z4-MJU" id="g2M-r7-XAo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wqJ-xa-wu4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
