@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="268" id="KGk-i7-Jjw" customClass="LuckyNumberCollectionTableViewCell" customModule="AccountLuckyNumber" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="321" height="268"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="321" height="267.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Brf-72-XeV">
+                        <rect key="frame" x="10" y="10" width="301" height="247.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LuckyNumber" translatesAutoresizingMaskIntoConstraints="NO" id="IP4-HA-OpF">
+                                <rect key="frame" x="0.0" y="0.0" width="301" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="hG5-n9-L6B"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rJ-yN-6OC">
+                                <rect key="frame" x="8" y="148" width="283" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jya-QY-JvX">
+                                <rect key="frame" x="8" y="188.5" width="283" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4rJ-yN-6OC" firstAttribute="leading" secondItem="Brf-72-XeV" secondAttribute="leading" constant="8" id="4qO-e2-5tV"/>
+                            <constraint firstAttribute="trailing" secondItem="jya-QY-JvX" secondAttribute="trailing" constant="10" id="7mk-pH-GIs"/>
+                            <constraint firstItem="jya-QY-JvX" firstAttribute="top" secondItem="4rJ-yN-6OC" secondAttribute="bottom" constant="20" id="97C-bA-Wpc"/>
+                            <constraint firstAttribute="trailing" secondItem="4rJ-yN-6OC" secondAttribute="trailing" constant="10" id="EOs-HG-OZC"/>
+                            <constraint firstItem="IP4-HA-OpF" firstAttribute="top" secondItem="Brf-72-XeV" secondAttribute="top" id="Huj-fI-FbW"/>
+                            <constraint firstItem="IP4-HA-OpF" firstAttribute="leading" secondItem="Brf-72-XeV" secondAttribute="leading" id="Pta-5D-r2G"/>
+                            <constraint firstItem="jya-QY-JvX" firstAttribute="leading" secondItem="Brf-72-XeV" secondAttribute="leading" constant="8" id="Qzs-M9-d3M"/>
+                            <constraint firstAttribute="trailing" secondItem="IP4-HA-OpF" secondAttribute="trailing" id="Zla-Fk-0oE"/>
+                            <constraint firstItem="4rJ-yN-6OC" firstAttribute="top" secondItem="IP4-HA-OpF" secondAttribute="bottom" constant="20" id="e4o-xK-Cl8"/>
+                            <constraint firstAttribute="bottom" secondItem="jya-QY-JvX" secondAttribute="bottom" constant="20" id="yta-Bb-sii"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Brf-72-XeV" secondAttribute="bottom" constant="10" id="5ed-oa-WO0"/>
+                    <constraint firstAttribute="trailing" secondItem="Brf-72-XeV" secondAttribute="trailing" constant="10" id="DsG-3g-F2V"/>
+                    <constraint firstItem="Brf-72-XeV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="mjj-cF-60n"/>
+                    <constraint firstItem="Brf-72-XeV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="r8b-F2-OXs"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="138.40579710144928" y="219.64285714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="LuckyNumber" width="1125" height="375"/>
+    </resources>
+</document>
