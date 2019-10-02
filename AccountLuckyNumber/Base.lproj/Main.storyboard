@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Lucky Number Detail View Controller-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AccountLuckyNumber" customModuleProvider="target" sceneMemberID="viewController">
@@ -225,6 +225,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="HgA-iZ-riv">
+            <objects>
+                <viewController id="BAd-5M-4cY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eip-wt-LZC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SiR-rG-urm">
+                                <rect key="frame" x="0.0" y="73" width="414" height="663"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nt3-o3-gwh">
+                                <rect key="frame" x="20" y="42" width="384" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Nt3-o3-gwh" firstAttribute="leading" secondItem="MEi-Pm-1YD" secondAttribute="leading" constant="20" id="0ZM-9h-L9Q"/>
+                            <constraint firstItem="MEi-Pm-1YD" firstAttribute="trailing" secondItem="SiR-rG-urm" secondAttribute="trailing" id="0ci-Zy-xtW"/>
+                            <constraint firstItem="MEi-Pm-1YD" firstAttribute="bottom" secondItem="SiR-rG-urm" secondAttribute="bottom" id="HeF-cV-u8K"/>
+                            <constraint firstItem="MEi-Pm-1YD" firstAttribute="trailing" secondItem="Nt3-o3-gwh" secondAttribute="trailing" constant="10" id="P8U-ig-vak"/>
+                            <constraint firstItem="SiR-rG-urm" firstAttribute="leading" secondItem="MEi-Pm-1YD" secondAttribute="leading" id="WIA-PT-xdc"/>
+                            <constraint firstItem="Nt3-o3-gwh" firstAttribute="top" secondItem="MEi-Pm-1YD" secondAttribute="top" constant="22" id="cXL-0E-P57"/>
+                            <constraint firstItem="SiR-rG-urm" firstAttribute="top" secondItem="Nt3-o3-gwh" secondAttribute="bottom" constant="10" id="wKR-lw-cjq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MEi-Pm-1YD"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cke-wj-UsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="912" y="102"/>
         </scene>
     </scenes>
     <resources>
