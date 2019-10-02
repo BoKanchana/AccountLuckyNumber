@@ -13,6 +13,7 @@ enum Key: String {
     case accountType = "accountType"
     case firstname = "firstname"
     case lastname = "lastname"
+    case accountLuckyNumber = "accountLuckyNumber"
 }
 
 enum Response: String {
