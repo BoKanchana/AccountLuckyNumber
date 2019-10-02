@@ -28,7 +28,11 @@ struct LuckyNumberCollection {
   var name: String
   var collection: [LuckyNumber]
 }
-
+struct LuckNumberType {
+  let image : String
+  let title :String
+  let discription:String
+}
 class FirebaseManager {
   private var ref: DatabaseReference!
 
