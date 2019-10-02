@@ -233,7 +233,7 @@ class FirebaseManager {
   }
   
   
-  func getAccessToken() {
+  func getAccessToken(completion: @escaping(_ result: Any) -> Void) {
     let body: [String: Any] = [
       "applicationKey" : "l7a02b32cbfd774988882e58a6c2d5c77e",
       "applicationSecret" : "a1d71fad366340d8bd4a7516f5c5d250"
@@ -252,19 +252,29 @@ class FirebaseManager {
                         switch response.result {
                           
                         case .success(let json):
-                          print(json)
+                          let data = json as! [String: AnyObject]
+                          for index in data {
+                            if index.key == "data" {
+                              print("data: \(index)")
+                              for data in index.value as! [String: AnyObject] {
+                                if data.key == "accessToken" {
+                                  completion(data.value)
+                                }
+                              }
+                            }
+                          }
                         case .failure(let error):
                           print(error)
                         }
     }
   }
   
-  func generateDeeplink(completion: @escaping(_ result: Any) -> Void) {
+  func generateDeeplink(token: String, completion: @escaping(_ result: Any) -> Void) {
     let urlString = "https://api.partners.scb/partners/sandbox/v3/deeplink/transactions"
-    let ref: Parameters = ["paymentAmount": 100.00,
+    let ref: Parameters = ["paymentAmount": 1000.00,
                            "accountTo": "448204658651865",
-                           "ref1": "QMM",
-                           "ref2": "QMM",
+                           "ref1": "QMM12345678",
+                           "ref2": "QMM12345678",
                            "ref3": "QMM"]
     
     let body: Parameters = ["transactionType": "PURCHASE",
@@ -273,7 +283,7 @@ class FirebaseManager {
                             "sessionValidUntil": "",
                             "billPayment": ref]
     let headers: HTTPHeaders = ["Content-Type": "application/json",
-                                "authorization": "Bearer c908bf29-7c0a-492d-94bc-898d791a1ffe",
+                                "authorization": "Bearer \(token)",
                                 "resourceOwnerId": "l7a02b32cbfd774988882e58a6c2d5c77e",
                                 "requestUId": "1",
                                 "channel": "scbeasy"]
@@ -287,8 +297,11 @@ class FirebaseManager {
                           let data = json as! [String: AnyObject]
                           for index in data {
                             if index.key == "data" {
-                              print("data: \(index)")
-                              completion(index.value)
+                              for link in index.value as! [String: AnyObject] {
+                                if link.key == "deeplinkUrl" {
+                                  completion(link.value)
+                                }
+                              }
                             }
                           }
                         case .failure(let error):

@@ -13,10 +13,34 @@ class LuckyNumberDetailViewController: UIViewController {
   @IBOutlet weak var luckyNumberImage: UIImageView!
   @IBOutlet weak var luckyNumberLabel: UILabel!
   @IBOutlet weak var descriptionLabel: UILabel!
+  @IBAction func confirmOrderButton(_ sender: Any) {
+    generateDeeplink()
+  }
+  var token: String = ""
   
   override func viewDidLoad() {
     super.viewDidLoad()
     getLuckyNumberDetail()
+    getAccessToken()
+  }
+  
+  func getAccessToken() {
+    FirebaseManager().getAccessToken() { result in
+      self.token = result as! String
+    }
+  }
+  
+  func generateDeeplink() {
+    FirebaseManager().generateDeeplink(token: token) { result in
+      let deeplink = result as! String
+      if deeplink != "" {
+       self.goToEasyApp(deeplink: deeplink)
+      }
+    }
+  }
+  
+  func goToEasyApp(deeplink: String) {
+    UIApplication.shared.openURL(NSURL(string: "\(deeplink)?callback_url=accountluckynumber://")! as URL)
   }
   
   func getLuckyNumberDetail() {
