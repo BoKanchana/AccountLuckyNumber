@@ -17,6 +17,8 @@ class LuckyNumberDetailViewController: UIViewController {
     generateDeeplink()
   }
   var token: String = ""
+  var lucky: LuckyNumber?
+  var luckyNumberDetail: LuckyNumber?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -34,7 +36,8 @@ class LuckyNumberDetailViewController: UIViewController {
     FirebaseManager().generateDeeplink(token: token) { result in
       let deeplink = result as! String
       if deeplink != "" {
-       self.goToEasyApp(deeplink: deeplink)
+        self.goToEasyApp(deeplink: deeplink)
+        self.setAccountLuckyNumber()
       }
     }
   }
@@ -45,11 +48,30 @@ class LuckyNumberDetailViewController: UIViewController {
   
   func getLuckyNumberDetail() {
     let collection = "Work"
-    let id = "9999999999"
-    FirebaseManager().getLuckyNumberDetail(collection: collection, id: id) { result in
+    FirebaseManager().getLuckyNumberDetail(collection: collection, id: lucky!.accountLuckyNumber) { result in
+      let accountLuckyNumber = result.accountLuckyNumber
+      let description = result.description
+      let price = result.price
+      let status = result.status
+      let type = result.type
+      
+      self.luckyNumberDetail = LuckyNumber(accountLuckyNumber: accountLuckyNumber,
+                                           description: description,
+                                           price: price,
+                                           status: status,
+                                           type: type)
       self.luckyNumberLabel.text = result.accountLuckyNumber
       self.descriptionLabel.text = result.description
     }
+  }
+  
+  func setAccountLuckyNumber() {
+    let accountNumber = AccountNumber(accountNumber: "1234567890",
+                                      accountType: "saving",
+                                      firstname: "ปวีร์",
+                                      lastname: "กิตติวัฒนากุล")
+    let lucky: LuckyNumber = luckyNumberDetail!
+    FirebaseManager().setAccountLuckyNumber(account: accountNumber, lucky: lucky)
   }
   
 }

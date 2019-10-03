@@ -69,6 +69,14 @@ class LuckNumberListViewController: UIViewController {
     return newImage
   }
   
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "LuckyNumberListGoToLuckNumberDetail" {
+      if let viewController = segue.destination as? LuckyNumberDetailViewController, let sender = sender  {
+        viewController.lucky = sender as! LuckyNumber
+      }
+    }
+  }
+  
 
 }
 
@@ -83,14 +91,6 @@ extension LuckNumberListViewController : UICollectionViewDataSource {
     }
     let luckyNubmerIndex = luckNumbers[indexPath.row]
     cell.setUi(lucynumberAtIndex: luckyNubmerIndex)
-    
-    
-    
-    
-    
-    
-    
-    
     return cell
   }
   
@@ -112,6 +112,7 @@ extension LuckNumberListViewController: UICollectionViewDelegateFlowLayout {
 
 extension LuckNumberListViewController : UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    performSegue(withIdentifier: "LuckyNumberListGoToLuckNumberDetail", sender: nil)
+    let lucky = luckNumbers[indexPath.row]
+    performSegue(withIdentifier: "LuckyNumberListGoToLuckNumberDetail", sender: lucky)
   }
 }

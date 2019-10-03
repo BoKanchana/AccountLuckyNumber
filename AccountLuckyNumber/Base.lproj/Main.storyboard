@@ -28,7 +28,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="133"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="name" translatesAutoresizingMaskIntoConstraints="NO" id="yUf-2L-OAS">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414.00000000000011" height="133"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="133"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.2498941405" green="1" blue="0.18846908070000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -390,9 +390,6 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="149.33333333333331" id="yhY-3A-wqK"/>
-                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

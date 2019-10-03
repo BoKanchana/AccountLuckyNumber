@@ -68,7 +68,7 @@ class FirebaseManager {
         let collection = response.filter { result in result.key == collection }
         for index in collection {
           for i in index.value as! [String: AnyObject] {
-            if i.key == id {
+            if i.value["accountLuckyNumber"] as! String == id {
               let j = i.value
               let accountLuckyNumber = j["accountLuckyNumber"]!
               let description = j["description"]!
@@ -189,7 +189,7 @@ class FirebaseManager {
   }
   
   func setAccountLuckyNumber(account: AccountNumber, lucky: LuckyNumber) {
-    self.ref.child(ACCOUNT_AND_LUCKY_KEY).child(getId(account.accountNumber)).setValue(
+    self.ref.child(ACCOUNT_AND_LUCKY_KEY).child(account.accountNumber).setValue(
       [Key.accountLuckyNumber.rawValue:lucky.accountLuckyNumber,
        Key.accountNumber.rawValue:account.accountNumber]
     ) {
