@@ -33,6 +33,7 @@ struct LuckNumberType {
   let image : String
   let title :String
   let discription:String
+  let status:String
 }
 class FirebaseManager {
   
