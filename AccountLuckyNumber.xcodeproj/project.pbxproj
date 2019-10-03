@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		04906401F809AD9CF47DDA03 /* Pods_AccountLuckyNumber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE4AD2FEEDCFDA82B0F9DCF /* Pods_AccountLuckyNumber.framework */; };
 		127306C52344D77D0014BB76 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 127306C42344D77D0014BB76 /* GoogleService-Info.plist */; };
+		127306C72345F04B0014BB76 /* InformationAccountNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127306C62345F04B0014BB76 /* InformationAccountNumberViewController.swift */; };
 		12EBB87923442B9C00A7384A /* LuckyNumberCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EBB87823442B9C00A7384A /* LuckyNumberCollectionViewController.swift */; };
 		12EBB87D23442C2800A7384A /* LuckyNumberCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EBB87B23442C2800A7384A /* LuckyNumberCollectionTableViewCell.swift */; };
 		12EBB87E23442C2800A7384A /* LuckyNumberCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12EBB87C23442C2800A7384A /* LuckyNumberCollectionTableViewCell.xib */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		127306C42344D77D0014BB76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		127306C62345F04B0014BB76 /* InformationAccountNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationAccountNumberViewController.swift; sourceTree = "<group>"; };
 		12EBB87823442B9C00A7384A /* LuckyNumberCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyNumberCollectionViewController.swift; sourceTree = "<group>"; };
 		12EBB87B23442C2800A7384A /* LuckyNumberCollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyNumberCollectionTableViewCell.swift; sourceTree = "<group>"; };
 		12EBB87C23442C2800A7384A /* LuckyNumberCollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LuckyNumberCollectionTableViewCell.xib; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				12EBB87823442B9C00A7384A /* LuckyNumberCollectionViewController.swift */,
 				12EBB8872344AEA900A7384A /* LuckNumberListViewController.swift */,
 				12EBB8892344BF5500A7384A /* LuckyNumberDetailViewController.swift */,
+				127306C62345F04B0014BB76 /* InformationAccountNumberViewController.swift */,
 			);
 			path = AccountLuckyNumber;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				127306C72345F04B0014BB76 /* InformationAccountNumberViewController.swift in Sources */,
 				12EBB88A2344BF5500A7384A /* LuckyNumberDetailViewController.swift in Sources */,
 				12EBB8882344AEA900A7384A /* LuckNumberListViewController.swift in Sources */,
 				D062004C23427093004312D3 /* Constants.swift in Sources */,
