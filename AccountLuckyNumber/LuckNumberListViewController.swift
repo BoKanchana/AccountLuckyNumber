@@ -33,7 +33,7 @@ class LuckNumberListViewController: UIViewController {
     }
   
   func setnavigationColor() {
-    var color = UIColor.init(
+    var color = UIColor.init()
     
   }
   
