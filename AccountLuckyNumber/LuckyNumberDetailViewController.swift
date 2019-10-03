@@ -26,6 +26,14 @@ class LuckyNumberDetailViewController: UIViewController {
     getAccessToken()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    navigationController?.setNavigationBarHidden(false, animated: animated)
+    navigationController?.navigationBar.backgroundColor = UIColorFromRGB(rgbValue: 0x572993)
+    navigationController?.navigationBar.barTintColor = UIColorFromRGB(rgbValue: 0x572993)
+    navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+  }
+  
   func getAccessToken() {
     FirebaseManager().getAccessToken() { result in
       self.token = result as! String
