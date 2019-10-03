@@ -33,7 +33,7 @@ class LuckNumberListViewController: UIViewController {
         let image = UIImage(named: "LuckNumberOfLove") ?? UIImage()
         luckyNumberImageView.image = imageWithGradient(img: image)
       }else {
-        let image = UIImage(named: "LuckyNumberOfWork") ?? UIImage()
+        let image = UIImage(named: "workpictrue") ?? UIImage()
         luckyNumberImageView.image = imageWithGradient(img: image)
       }
         getLuckyNumberList(accountName: status)

@@ -25,7 +25,7 @@ class LuckyNumberCollectionViewController: UIViewController {
         luckNumberType = [LuckNumberType(image: "LuckNumberOfLove",
                                          title: "ความรัก",
                                          discription: "เลขบัญชีที่ส่งเสริมเรื่อง ความรัก เพื่อให้ทุกคนมีรักที่ดี มีความหวังที่สดใส พร้อมรักษาหัวใจให้สดชื่นไว้ในทุกวัน", status: "Love"),
-                          LuckNumberType(image: "LuckyNumberOfWork",
+                          LuckNumberType(image: "workpictrue",
                                          title: "การงาน",
                                          discription: "เลขบัญชีที่เหมาะสมกับอาชีพเพื่อเพิ่มศักยภาพในการทำงาน และเพิ่มโอกาศของการประสบความสำเร็จ", status: "Work")]
     }
