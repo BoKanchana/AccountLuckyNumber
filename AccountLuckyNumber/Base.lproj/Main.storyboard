@@ -28,7 +28,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="133"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="name" translatesAutoresizingMaskIntoConstraints="NO" id="yUf-2L-OAS">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="133"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414.00000000000011" height="133"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.2498941405" green="1" blue="0.18846908070000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -341,38 +341,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rch-c6-9kE">
-                                <rect key="frame" x="0.0" y="63.999999999999972" width="414" height="403.33333333333326"/>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="2oW-Yh-u22">
-                                <rect key="frame" x="20" y="487.33333333333331" width="374" height="149.33333333333331"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8i-CP-Zwb">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="เลขบัญชีมงคล" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfW-WO-MmU">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXX-XXX1-234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGx-Z4-MJU">
-                                        <rect key="frame" x="0.0" y="26.333333333333311" width="374" height="35.666666666666657"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="26"/>
-                                        <color key="textColor" red="0.99763482809066772" green="0.83864783728110159" blue="0.1862692768727652" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaN-5o-s7r">
-                                        <rect key="frame" x="0.0" y="68.000000000000057" width="374" height="81.333333333333314"/>
-                                        <string key="text">วันที่จะเปลี่ยนมาใช้เบอร์มงคล ให้ไหว้พระ หรือตักบาตร หรือทำบุญอะไรก็ได้ แล้วตั้งจิตขอพรให้เบอร์ใหม่ส่งผลให้ชีวิตดีขึ้น พบเจอแต่สิ่งที่ดีและเป็นสิริมงคลแก่ชีวิต</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="knc-ib-T3K">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="656.66666666666663"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rch-c6-9kE">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="403.33333333333331"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="403.32999999999998" id="jzh-eq-hLI"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="2oW-Yh-u22">
+                                                <rect key="frame" x="22" y="425.33333333333331" width="370" height="149.33333333333331"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="เลขบัญชีมงคล" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfW-WO-MmU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="370" height="20.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXX-XXX1-234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGx-Z4-MJU">
+                                                        <rect key="frame" x="0.0" y="26.333333333333311" width="370" height="35.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="26"/>
+                                                        <color key="textColor" red="0.99763482809066772" green="0.83864783728110159" blue="0.1862692768727652" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaN-5o-s7r">
+                                                        <rect key="frame" x="0.0" y="68.000000000000057" width="370" height="81.333333333333314"/>
+                                                        <string key="text">วันที่จะเปลี่ยนมาใช้เบอร์มงคล ให้ไหว้พระ หรือตักบาตร หรือทำบุญอะไรก็ได้ แล้วตั้งจิตขอพรให้เบอร์ใหม่ส่งผลให้ชีวิตดีขึ้น พบเจอแต่สิ่งที่ดีและเป็นสิริมงคลแก่ชีวิต</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="149.33333333333331" id="yhY-3A-wqK"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="2oW-Yh-u22" secondAttribute="trailing" constant="22" id="LDR-OU-g1p"/>
+                                            <constraint firstItem="Rch-c6-9kE" firstAttribute="leading" secondItem="knc-ib-T3K" secondAttribute="leading" id="VW5-XD-FRw"/>
+                                            <constraint firstItem="2oW-Yh-u22" firstAttribute="leading" secondItem="knc-ib-T3K" secondAttribute="leading" constant="22" id="Wz9-kg-Ttv"/>
+                                            <constraint firstItem="2oW-Yh-u22" firstAttribute="top" secondItem="Rch-c6-9kE" secondAttribute="bottom" constant="22" id="apv-v6-xjc"/>
+                                            <constraint firstAttribute="trailing" secondItem="Rch-c6-9kE" secondAttribute="trailing" id="mcW-AN-bFq"/>
+                                            <constraint firstItem="Rch-c6-9kE" firstAttribute="top" secondItem="knc-ib-T3K" secondAttribute="top" id="ryI-uV-JgX"/>
+                                            <constraint firstAttribute="bottom" secondItem="2oW-Yh-u22" secondAttribute="bottom" constant="82" id="wkD-un-bkP"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                            </stackView>
+                                <constraints>
+                                    <constraint firstItem="knc-ib-T3K" firstAttribute="leading" secondItem="c8i-CP-Zwb" secondAttribute="leading" id="9kh-cg-7NC"/>
+                                    <constraint firstItem="knc-ib-T3K" firstAttribute="top" secondItem="c8i-CP-Zwb" secondAttribute="top" id="J82-u2-p83"/>
+                                    <constraint firstAttribute="trailing" secondItem="knc-ib-T3K" secondAttribute="trailing" id="OXj-hN-fSN"/>
+                                    <constraint firstItem="knc-ib-T3K" firstAttribute="width" secondItem="c8i-CP-Zwb" secondAttribute="width" id="kYJ-J0-zvK"/>
+                                    <constraint firstAttribute="bottom" secondItem="knc-ib-T3K" secondAttribute="bottom" id="xpf-0k-OVE"/>
+                                </constraints>
+                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqS-Jk-KQm">
                                 <rect key="frame" x="0.0" y="684" width="414" height="52"/>
                                 <color key="backgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="Nac-5A-vSe"/>
+                                    <constraint firstAttribute="height" constant="52" id="oP9-AZ-9Fa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="ทำรายการซื้อ">
@@ -385,16 +418,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Rch-c6-9kE" firstAttribute="leading" secondItem="ffL-17-Fov" secondAttribute="leading" id="62M-eU-ARe"/>
-                            <constraint firstItem="Rch-c6-9kE" firstAttribute="height" secondItem="ffL-17-Fov" secondAttribute="height" multiplier="0.6" id="GdB-Rt-wBr"/>
-                            <constraint firstItem="ffL-17-Fov" firstAttribute="trailing" secondItem="2oW-Yh-u22" secondAttribute="trailing" constant="20" id="JUc-SJ-1bl"/>
-                            <constraint firstItem="2oW-Yh-u22" firstAttribute="top" secondItem="Rch-c6-9kE" secondAttribute="bottom" constant="20" id="Kgb-44-irO"/>
-                            <constraint firstItem="QqS-Jk-KQm" firstAttribute="leading" secondItem="ffL-17-Fov" secondAttribute="leading" id="NGk-dP-pcP"/>
-                            <constraint firstItem="Rch-c6-9kE" firstAttribute="top" secondItem="ffL-17-Fov" secondAttribute="top" id="VRl-na-eqc"/>
-                            <constraint firstAttribute="bottom" secondItem="QqS-Jk-KQm" secondAttribute="bottom" id="aga-zJ-Doe"/>
-                            <constraint firstItem="ffL-17-Fov" firstAttribute="trailing" secondItem="QqS-Jk-KQm" secondAttribute="trailing" id="bqU-CT-kpO"/>
-                            <constraint firstItem="Rch-c6-9kE" firstAttribute="trailing" secondItem="ffL-17-Fov" secondAttribute="trailing" id="g8X-Zb-RFU"/>
-                            <constraint firstItem="2oW-Yh-u22" firstAttribute="leading" secondItem="ffL-17-Fov" secondAttribute="leading" constant="20" id="iDM-XR-Qv1"/>
+                            <constraint firstItem="c8i-CP-Zwb" firstAttribute="top" secondItem="ffL-17-Fov" secondAttribute="top" id="KUl-z1-Dfq"/>
+                            <constraint firstItem="ffL-17-Fov" firstAttribute="trailing" secondItem="c8i-CP-Zwb" secondAttribute="trailing" id="MC2-xB-6qB"/>
+                            <constraint firstItem="c8i-CP-Zwb" firstAttribute="leading" secondItem="ffL-17-Fov" secondAttribute="leading" id="bcy-z4-qig"/>
+                            <constraint firstItem="QqS-Jk-KQm" firstAttribute="leading" secondItem="ffL-17-Fov" secondAttribute="leading" id="ngn-15-U1T"/>
+                            <constraint firstItem="ffL-17-Fov" firstAttribute="bottom" secondItem="QqS-Jk-KQm" secondAttribute="bottom" id="wzf-ke-REn"/>
+                            <constraint firstItem="ffL-17-Fov" firstAttribute="bottom" secondItem="c8i-CP-Zwb" secondAttribute="bottom" id="xn2-Bn-SQd"/>
+                            <constraint firstItem="QqS-Jk-KQm" firstAttribute="trailing" secondItem="ffL-17-Fov" secondAttribute="trailing" id="zfw-uL-YRd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ffL-17-Fov"/>
                     </view>
@@ -406,7 +436,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wqJ-xa-wu4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3466.666666666667" y="82.33695652173914"/>
+            <point key="canvasLocation" x="3474" y="95"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dw1-uH-cV1">
