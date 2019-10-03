@@ -12,9 +12,7 @@ class InformationAccountNumberViewController: UIViewController {
 
   @IBOutlet weak var viewmain: UIView!
   
-  @IBOutlet weak var viewaccountNumber: UIView!
   
-  @IBOutlet weak var accountNumber: UILabel!
   override func viewDidLoad() {
         super.viewDidLoad()
       viewmain.layer.cornerRadius = 5.0
