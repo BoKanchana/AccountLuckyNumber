@@ -37,8 +37,8 @@ struct LuckNumberType {
 class FirebaseManager {
   
   private var ref: DatabaseReference!
-  
   private var list = [AccountNumber]()
+  private var listLucky = [LuckyNumber]()
   
   private var ACCOUNT_KEY = "AccountNumber"
   private var LUCKY_NUMBER = "LuckyNumber"
@@ -48,22 +48,16 @@ class FirebaseManager {
     ref = Database.database().reference()
   }
   
+  func getId(_ accountNumber: String) -> String {
+    return accountNumber.replacingOccurrences(of: "-", with: "")
+  }
+  
   func getLuckyNumberCollection(completion: @escaping ([Any]) -> Void) {
     self.ref.child(LUCKY_NUMBER).observe(DataEventType.value, with: { (snapshot) in
       if let response = snapshot.value as? [String: AnyObject] {
         let collection = response.map { result in result.key }
         print("collection: \(collection)")
         completion(collection)
-      }
-    })
-  }
-  
-  
-  func getLuckyNumberList(collection: String, completion: @escaping ([LuckyNumberCollection]) -> Void) {
-    self.ref.child(LUCKY_NUMBER).observe(DataEventType.value, with: { (snapshot) in
-      if let response = snapshot.value as? [String: AnyObject] {
-        let collection = response.filter { result in result.key == collection }
-        print("collection: \(collection)")
       }
     })
   }
@@ -93,9 +87,21 @@ class FirebaseManager {
       }
     })
   }
-  
-  func getId(_ accountNumber: String) -> String {
-    return accountNumber.replacingOccurrences(of: "-", with: "")
+
+  func getLuckyNumberList(collection: String, completion: @escaping ([LuckyNumber]) -> Void) {
+    self.ref.child(LUCKY_NUMBER).child(collection).observe(DataEventType.value, with: { (snapshot) in
+      if let response = snapshot.value as? [String: AnyObject] {
+        for data in response.values{
+          let account = LuckyNumber(accountLuckyNumber: data["accountLuckyNumber"] as! String,
+                                    description: data["description"] as! String,
+                                    price: data["price"] as! Int,
+                                    status: data["status"] as! String,
+                                    type: data["type"] as! String)
+          self.listLucky.append(account)
+        }
+        completion(self.listLucky)
+      }
+    })
   }
   
   func createAccountNumber(account: AccountNumber) {
@@ -232,7 +238,6 @@ class FirebaseManager {
     }
   }
   
-  
   func getAccessToken(completion: @escaping(_ result: Any) -> Void) {
     let body: [String: Any] = [
       "applicationKey" : "l7a02b32cbfd774988882e58a6c2d5c77e",
@@ -309,6 +314,5 @@ class FirebaseManager {
                         }
     }
   }
-  
 }
 
