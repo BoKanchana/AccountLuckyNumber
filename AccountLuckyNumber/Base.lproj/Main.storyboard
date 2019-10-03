@@ -467,35 +467,32 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="knc-ib-T3K">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="656.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="288"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rch-c6-9kE">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="403.33333333333331"/>
-                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="403.32999999999998" id="jzh-eq-hLI"/>
-                                                </constraints>
-                                            </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="2oW-Yh-u22">
-                                                <rect key="frame" x="22" y="425.33333333333331" width="370" height="149.33333333333331"/>
+                                                <rect key="frame" x="22" y="22" width="370" height="184"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="เลขบัญชีมงคล" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfW-WO-MmU">
                                                         <rect key="frame" x="0.0" y="0.0" width="370" height="20.333333333333332"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.99763482810000004" green="0.83864783730000003" blue="0.1862692769" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXX-XXX1-234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGx-Z4-MJU">
-                                                        <rect key="frame" x="0.0" y="26.333333333333311" width="370" height="35.666666666666657"/>
+                                                        <rect key="frame" x="0.0" y="26.333333333333325" width="370" height="35.666666666666657"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="26"/>
-                                                        <color key="textColor" red="0.99763482809066772" green="0.83864783728110159" blue="0.1862692768727652" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaN-5o-s7r">
-                                                        <rect key="frame" x="0.0" y="68.000000000000057" width="370" height="81.333333333333314"/>
+                                                        <rect key="frame" x="0.0" y="68" width="370" height="81.333333333333314"/>
                                                         <string key="text">วันที่จะเปลี่ยนมาใช้เบอร์มงคล ให้ไหว้พระ หรือตักบาตร หรือทำบุญอะไรก็ได้ แล้วตั้งจิตขอพรให้เบอร์ใหม่ส่งผลให้ชีวิตดีขึ้น พบเจอแต่สิ่งที่ดีและเป็นสิริมงคลแก่ชีวิต</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999.00 บาท" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5Y-y6-Jkr">
+                                                        <rect key="frame" x="0.0" y="155.33333333333334" width="370" height="28.666666666666657"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -504,11 +501,8 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="2oW-Yh-u22" secondAttribute="trailing" constant="22" id="LDR-OU-g1p"/>
-                                            <constraint firstItem="Rch-c6-9kE" firstAttribute="leading" secondItem="knc-ib-T3K" secondAttribute="leading" id="VW5-XD-FRw"/>
                                             <constraint firstItem="2oW-Yh-u22" firstAttribute="leading" secondItem="knc-ib-T3K" secondAttribute="leading" constant="22" id="Wz9-kg-Ttv"/>
-                                            <constraint firstItem="2oW-Yh-u22" firstAttribute="top" secondItem="Rch-c6-9kE" secondAttribute="bottom" constant="22" id="apv-v6-xjc"/>
-                                            <constraint firstAttribute="trailing" secondItem="Rch-c6-9kE" secondAttribute="trailing" id="mcW-AN-bFq"/>
-                                            <constraint firstItem="Rch-c6-9kE" firstAttribute="top" secondItem="knc-ib-T3K" secondAttribute="top" id="ryI-uV-JgX"/>
+                                            <constraint firstItem="2oW-Yh-u22" firstAttribute="top" secondItem="knc-ib-T3K" secondAttribute="top" constant="22" id="kKa-0X-wfh"/>
                                             <constraint firstAttribute="bottom" secondItem="2oW-Yh-u22" secondAttribute="bottom" constant="82" id="wkD-un-bkP"/>
                                         </constraints>
                                     </view>
@@ -550,7 +544,6 @@
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="uaN-5o-s7r" id="O7J-gc-ytK"/>
-                        <outlet property="luckyNumberImage" destination="Rch-c6-9kE" id="RDc-Uy-zBh"/>
                         <outlet property="luckyNumberLabel" destination="CGx-Z4-MJU" id="g2M-r7-XAo"/>
                     </connections>
                 </viewController>
