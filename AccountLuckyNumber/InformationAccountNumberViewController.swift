@@ -10,9 +10,22 @@ import UIKit
 
 class InformationAccountNumberViewController: UIViewController {
 
-    override func viewDidLoad() {
+  @IBOutlet weak var viewmain: UIView!
+  
+  @IBOutlet weak var viewaccountNumber: UIView!
+  
+  @IBOutlet weak var accountNumber: UILabel!
+  override func viewDidLoad() {
         super.viewDidLoad()
-
+      viewmain.layer.cornerRadius = 5.0
+      viewmain.layer.shadowColor = UIColor.gray.cgColor
+      viewmain.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+      viewmain.layer.shadowRadius = 5.0
+      viewmain.layer.shadowOpacity = 0.7
+    
+//    viewaccountNumber.animateWithDuration(2, animations: { () -> Void in
+//      accountNumber.backgroundColor = UIColor.redColor();
+//    })
        
     }
     
