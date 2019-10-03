@@ -23,11 +23,11 @@ class LuckyNumberCollectionViewController: UIViewController {
         let nib = UINib(nibName: "LuckyNumberCollectionTableViewCell", bundle: bundle)
         tableView.register(nib, forCellReuseIdentifier: "LuckyNumberCollectionTableViewCell")
         luckNumberType = [LuckNumberType(image: "LuckNumberOfLove",
-                                         title: "Test01",
-                                         discription: "TestDes01"),
+                                         title: "ความรัก",
+                                         discription: "เลขบัญชีที่ส่งเสริมเรื่อง ความรัก เพื่อให้ทุกคนมีรักที่ดี มีความหวังที่สดใส พร้อมรักษาหัวใจให้สดชื่นไว้ในทุกวัน", status: "Love"),
                           LuckNumberType(image: "LuckyNumberOfWork",
-                                         title: "Test02",
-                                         discription: "TestDes02")]
+                                         title: "การงาน",
+                                         discription: "เลขบัญชีที่เหมาะสมกับอาชีพเพื่อเพิ่มศักยภาพในการทำงาน และเพิ่มโอกาศของการประสบความสำเร็จ", status: "Work")]
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,6 +36,13 @@ class LuckyNumberCollectionViewController: UIViewController {
         navigationController?.navigationBar.backgroundColor = UIColorFromRGB(rgbValue: 0x572993)
         navigationController?.navigationBar.barTintColor = UIColorFromRGB(rgbValue: 0x572993)
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      if segue.identifier == "LuckyNumberCollectionViewControllerGoToLuckyNumberList" {
+        if let viewController = segue.destination as? LuckNumberListViewController, let sender = sender  {
+            viewController.status = sender as! String
+        }
+      }
     }
 
 }
@@ -61,6 +68,8 @@ extension LuckyNumberCollectionViewController : UITableViewDataSource {
 
 extension LuckyNumberCollectionViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "LuckyNumberCollectionViewControllerGoToLuckyNumberList", sender: nil)
+        let status = luckNumberType[indexPath.row].status
+      
+        performSegue(withIdentifier: "LuckyNumberCollectionViewControllerGoToLuckyNumberList", sender: status)
     }
 }
