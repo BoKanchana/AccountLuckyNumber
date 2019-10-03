@@ -47,7 +47,6 @@ extension LuckyNumberCollectionViewController : UITableViewDataSource {
     return cell
   }
   
-  
 }
 
 extension LuckyNumberCollectionViewController : UITableViewDelegate {

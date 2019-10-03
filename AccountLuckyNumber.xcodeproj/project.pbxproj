@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		04906401F809AD9CF47DDA03 /* Pods_AccountLuckyNumber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE4AD2FEEDCFDA82B0F9DCF /* Pods_AccountLuckyNumber.framework */; };
+		127306C52344D77D0014BB76 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 127306C42344D77D0014BB76 /* GoogleService-Info.plist */; };
 		12EBB87923442B9C00A7384A /* LuckyNumberCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EBB87823442B9C00A7384A /* LuckyNumberCollectionViewController.swift */; };
 		12EBB87D23442C2800A7384A /* LuckyNumberCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EBB87B23442C2800A7384A /* LuckyNumberCollectionTableViewCell.swift */; };
 		12EBB87E23442C2800A7384A /* LuckyNumberCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12EBB87C23442C2800A7384A /* LuckyNumberCollectionTableViewCell.xib */; };
-		12EBB882234430EF00A7384A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12EBB881234430EE00A7384A /* GoogleService-Info.plist */; };
 		12EBB8852344AD5300A7384A /* LuckyNumberListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EBB8832344AD5300A7384A /* LuckyNumberListCollectionViewCell.swift */; };
 		12EBB8862344AD5300A7384A /* LuckyNumberListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12EBB8842344AD5300A7384A /* LuckyNumberListCollectionViewCell.xib */; };
 		12EBB8882344AEA900A7384A /* LuckNumberListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EBB8872344AEA900A7384A /* LuckNumberListViewController.swift */; };
@@ -26,10 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		127306C42344D77D0014BB76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		12EBB87823442B9C00A7384A /* LuckyNumberCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyNumberCollectionViewController.swift; sourceTree = "<group>"; };
 		12EBB87B23442C2800A7384A /* LuckyNumberCollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyNumberCollectionTableViewCell.swift; sourceTree = "<group>"; };
 		12EBB87C23442C2800A7384A /* LuckyNumberCollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LuckyNumberCollectionTableViewCell.xib; sourceTree = "<group>"; };
-		12EBB881234430EE00A7384A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		12EBB8832344AD5300A7384A /* LuckyNumberListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyNumberListCollectionViewCell.swift; sourceTree = "<group>"; };
 		12EBB8842344AD5300A7384A /* LuckyNumberListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LuckyNumberListCollectionViewCell.xib; sourceTree = "<group>"; };
 		12EBB8872344AEA900A7384A /* LuckNumberListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckNumberListViewController.swift; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 		F0CB058D23423A56009CF25E /* AccountLuckyNumber */ = {
 			isa = PBXGroup;
 			children = (
-				12EBB881234430EE00A7384A /* GoogleService-Info.plist */,
+				127306C42344D77D0014BB76 /* GoogleService-Info.plist */,
 				12EBB87A23442BFC00A7384A /* cell */,
 				F0CB058E23423A56009CF25E /* AppDelegate.swift */,
 				F0CB059023423A56009CF25E /* ViewController.swift */,
@@ -189,9 +189,9 @@
 				F0CB059923423A58009CF25E /* LaunchScreen.storyboard in Resources */,
 				12EBB87E23442C2800A7384A /* LuckyNumberCollectionTableViewCell.xib in Resources */,
 				12EBB8862344AD5300A7384A /* LuckyNumberListCollectionViewCell.xib in Resources */,
-				12EBB882234430EF00A7384A /* GoogleService-Info.plist in Resources */,
 				F0CB059623423A58009CF25E /* Assets.xcassets in Resources */,
 				F0CB059423423A56009CF25E /* Main.storyboard in Resources */,
+				127306C52344D77D0014BB76 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
