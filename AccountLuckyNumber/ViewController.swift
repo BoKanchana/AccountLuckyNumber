@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         firebase = FirebaseManager()
         createAccountNumber(accountNumber: AccountNumber(accountNumber: "111-111-111-1", accountType: "saving", firstname: "Noey", lastname: "Eeng"))
         getAccountNumberDict()
@@ -22,6 +23,9 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+      navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+      navigationController?.navigationBar.backgroundColor = UIColorFromRGB(rgbValue: 0x572993)
+      navigationController?.navigationBar.barTintColor = UIColorFromRGB(rgbValue: 0x572993)
     }
     
     func createAccountNumber(accountNumber: AccountNumber) {

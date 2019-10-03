@@ -67,6 +67,7 @@ class LuckNumberListViewController: UIViewController {
     if segue.identifier == "LuckyNumberListGoToLuckNumberDetail" {
       if let viewController = segue.destination as? LuckyNumberDetailViewController, let sender = sender  {
         viewController.lucky = sender as! LuckyNumber
+        viewController.status = status
       }
     }
   }

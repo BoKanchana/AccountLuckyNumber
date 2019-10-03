@@ -16,6 +16,8 @@ class InformationAccountNumberViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    title = "รายละเอียดบัญชี"
+    
     viewmain.layer.cornerRadius = 12.0
     viewmain.layer.shadowColor = UIColor.gray.cgColor
     viewmain.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
@@ -28,6 +30,13 @@ class InformationAccountNumberViewController: UIViewController {
     //      accountNumber.backgroundColor = UIColor.redColor();
     //    })
     
+  }
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    navigationController?.setNavigationBarHidden(false, animated: animated)
+    navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+    let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+    navigationController?.navigationBar.titleTextAttributes = textAttributes
   }
   
   func getAccountNumber() {
