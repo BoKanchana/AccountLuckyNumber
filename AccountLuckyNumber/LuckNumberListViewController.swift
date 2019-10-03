@@ -12,6 +12,7 @@ class LuckNumberListViewController: UIViewController {
     private var firebase: FirebaseManager!
     var luckNumbers : [LuckyNumber] = []
     var color = UIColor()
+    var status :String = ""
     @IBOutlet weak var luckyNumberImageView: UIImageView!
     
     
@@ -27,10 +28,15 @@ class LuckNumberListViewController: UIViewController {
         let bundle = Bundle(for: LuckyNumberListCollectionViewCell.self)
         let nib = UINib(nibName: "LuckyNumberListCollectionViewCell", bundle: bundle)
         colletionview.register(nib, forCellWithReuseIdentifier: "LuckyNumberListCollectionViewCell")
-        
+      
+      if status == "Love" {
         let image = UIImage(named: "LuckNumberOfLove") ?? UIImage()
         luckyNumberImageView.image = imageWithGradient(img: image)
-        getLuckyNumberList(accountName: "Work")
+      }else {
+        let image = UIImage(named: "LuckyNumberOfWork") ?? UIImage()
+        luckyNumberImageView.image = imageWithGradient(img: image)
+      }
+        getLuckyNumberList(accountName: status)
         
     }
     
