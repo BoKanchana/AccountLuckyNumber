@@ -22,7 +22,7 @@ class LuckNumberListViewController: UIViewController {
         super.viewDidLoad()
        
         //add type 
-        self.title = "ความรัก"
+      
 
         firebase = FirebaseManager()
         let bundle = Bundle(for: LuckyNumberListCollectionViewCell.self)
@@ -30,9 +30,11 @@ class LuckNumberListViewController: UIViewController {
         colletionview.register(nib, forCellWithReuseIdentifier: "LuckyNumberListCollectionViewCell")
       
       if status == "Love" {
+        self.title = "ความรัก"
         let image = UIImage(named: "LuckNumberOfLove") ?? UIImage()
         luckyNumberImageView.image = imageWithGradient(img: image)
       }else {
+        self.title = "การงาน"
         let image = UIImage(named: "workpictrue") ?? UIImage()
         luckyNumberImageView.image = imageWithGradient(img: image)
       }

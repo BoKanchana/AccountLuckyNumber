@@ -296,7 +296,7 @@ class FirebaseManager {
   
   func generateDeeplink(token: String, completion: @escaping(_ result: Any) -> Void) {
     let urlString = "https://api.partners.scb/partners/sandbox/v3/deeplink/transactions"
-    let ref: Parameters = ["paymentAmount": 1000.00,
+    let ref: Parameters = ["paymentAmount": 999.00,
                            "accountTo": "448204658651865",
                            "ref1": "QMM12345678",
                            "ref2": "QMM12345678",
