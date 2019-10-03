@@ -18,6 +18,12 @@ class ViewController: UIViewController {
         getAccountNumberDict()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+    
     func createAccountNumber(accountNumber: AccountNumber) {
         firebase.createAccountNumber(account: accountNumber)
     }
