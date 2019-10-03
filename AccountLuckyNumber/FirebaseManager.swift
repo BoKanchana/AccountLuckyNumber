@@ -17,6 +17,11 @@ struct AccountNumber {
   var lastname: String
 }
 
+struct AccountLuckyNumber {
+  var accountNumber: String
+  var accountLuckyNumber: String
+}
+
 struct LuckyNumber {
   var accountLuckyNumber: String
   var description: String
@@ -29,11 +34,13 @@ struct LuckyNumberCollection {
   var name: String
   var collection: [LuckyNumber]
 }
+
 struct LuckNumberType {
   let image : String
   let title :String
   let discription:String
 }
+
 class FirebaseManager {
   
   private var ref: DatabaseReference!
@@ -202,16 +209,28 @@ class FirebaseManager {
     }
   }
   
-  func getAccountLuckyNumber(accNumber: String, completion: @escaping (LuckyNumber) -> Void) {
+  func getAccountLuckyNumber(accNumber: String, completion: @escaping (AccountLuckyNumber) -> Void) {
     self.ref.child(ACCOUNT_AND_LUCKY_KEY).child(getId(accNumber)).observeSingleEvent(of: .value, with: { (snapshot) in if let response = snapshot.value as? NSDictionary {
-      //            TODO: get LuckyNumber info and send with completion
-      //            completion()
+      let lucky = AccountLuckyNumber(accountNumber: response.value(forKey: "accountNumber") as! String,
+                                     accountLuckyNumber: response.value(forKey: "accountLuckyNumber") as! String)
+      completion(lucky)
       }
     }) { (error) in
       //            print(error.localizedDescription)
       print("\(Response.readError.rawValue): \(error).")
     }
   }
+  
+//  func getAccountLuckyNumber(accNumber: String, completion: @escaping (LuckyNumber) -> Void) {
+//    self.ref.child(ACCOUNT_AND_LUCKY_KEY).child(getId(accNumber)).observeSingleEvent(of: .value, with: { (snapshot) in if let response = snapshot.value as? NSDictionary {
+//      //            TODO: get LuckyNumber info and send with completion
+//      //            completion()
+//      }
+//    }) { (error) in
+//      //            print(error.localizedDescription)
+//      print("\(Response.readError.rawValue): \(error).")
+//    }
+//  }
   
   func updateAccountLuckyNumber(fromAccountNumber: String, withLuckyNumber: LuckyNumber) {
     let data = [Key.accountLuckyNumber.rawValue:withLuckyNumber.accountLuckyNumber,
